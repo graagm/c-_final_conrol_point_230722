@@ -21,6 +21,13 @@
 void PrintedArray(string [] ms)
 {
     int N = ms.Length;
+
+    if (N == 0)
+    {
+        Console.WriteLine("Массив ну СОВСЕМ пуст");
+        return;
+    }
+    Console.WriteLine("Список подходящих элементов массива");
     for(int i=0; i<N; i++)
     {
         Console.WriteLine($"{i+1}: {ms[i]}");
@@ -30,7 +37,6 @@ void PrintedArray(string [] ms)
 int X = new Random().Next(10, 14);
 string [] msGlobal = new string [X];
 NewRandomArray(msGlobal);
-PrintedArray(msGlobal);
 
 string [] ms_final = new string[0];
 int index = 0;
